@@ -1,0 +1,42 @@
+/* colores base */
+:root {
+  --color-primario: #004aad;
+  --color-secundario: #0aa3e0;
+  --gris-suave: #f5f7fb;
+  --texto: #222;
+}
+
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: white;
+  scroll-behavior: smooth;
+}
+
+/* header */
+.brand img {
+  object-fit: contain;
+}
+
+/* titulos */
+h1, h2, h3, h4 { color: var(--color-primario); }
+
+/* destacados */
+.destacado {
+  background: #eef8ff;
+  border-left: 6px solid var(--color-secundario);
+  border-radius: .5rem;
+}
+
+/* tabla */
+table a { color: var(--color-primario); text-decoration: none; }
+table a:hover { text-decoration: underline; }
+
+/* footer */
+footer a { color: var(--color-primario); }
+
+/* espacio entre secciones */
+section { margin-bottom: 2rem; }
