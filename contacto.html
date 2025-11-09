@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog INET – Contacto</title>
+  <meta name="description" content="Formulario de contacto demostrativo del Blog INET." />
+
+  <!-- comentario: bootstrap y estilos del sitio -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- comentario: misma barra fija que en las otras páginas -->
+  <header class="navbar navbar-expand-lg bg-body-tertiary border-bottom shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo-inet.png" alt="Logo INET" width="44" height="44" onerror="this.style.display='none'">
+        <span class="fw-semibold">Blog del INET</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav id="menu-principal" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://inet.cfe.edu.uy/" target="_blank" rel="noopener">INET</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- comentario: contenedor con margen superior por nav fija -->
+  <main class="container mt-nav py-4">
+    <header class="mb-4">
+      <h1 class="h3 text-primary">Contacto</h1>
+      <p class="text-muted mb-0">Este formulario es demostrativo y no envía correos. Al presionar Enviar se muestra un aviso en pantalla.</p>
+    </header>
+
+    <!-- comentario: formulario accesible, sin envío real -->
+    <form class="row g-3" onsubmit="event.preventDefault(); document.getElementById('aviso-no-envia').classList.remove('d-none');">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre *</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Tu nombre" required>
+      </div>
+      <div class="col-md-6">
+        <label for="correo" class="form-label">Correo electrónico *</label>
+        <input type="email" id="correo" name="correo" class="form-control" placeholder="tunombre@ejemplo.com" required>
+      </div>
+      <div class="col-12">
+        <label for="mensaje" class="form-label">Mensaje *</label>
+        <textarea id="mensaje" name="mensaje" class="form-control" placeholder="Escribí tu mensaje" required></textarea>
+      </div>
+      <div class="col-12 d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+
+      <!-- comentario: aviso explícito de que no se envía nada -->
+      <div id="aviso-no-envia" class="alert alert-secondary d-none" role="alert">
+        Gracias por escribir. Este formulario no envía datos, es solo de demostración para la entrega.
+      </div>
+    </form>
+
+    <!-- comentario: alternativas de contacto -->
+    <section class="mt-4">
+      <h2 class="h5">Otras vías</h2>
+      <ul class="mb-0">
+        <li>Correo institucional: contacto@inet.edu.uy</li>
+        <li>Sitio web: <a href="https://inet.cfe.edu.uy/" target="_blank" rel="noopener">inet.cfe.edu.uy</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="border-top bg-light py-3">
+    <div class="container small">
+      <strong>Contacto:</strong> contacto@inet.edu.uy · Sitio: <a href="https://inet.cfe.edu.uy/" target="_blank" rel="noopener">inet.cfe.edu.uy</a>
+    </div>
+  </footer>
+
+  <!-- comentario: js de bootstrap para interacciones -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

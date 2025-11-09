@@ -1,42 +1,58 @@
-/* colores base */
-:root {
-  --color-primario: #004aad;
-  --color-secundario: #0aa3e0;
-  --gris-suave: #f5f7fb;
-  --texto: #222;
+/* comentario: colores base inet y boton solicitado */
+:root{
+  --inet-azul:#004aad;
+  --inet-celeste:#0aa3e0;
+  --texto:#222;
+  --btn:#25558d;       /* color pedido para botones */
+  --btn-hover:#1e4876; /* un poco mas oscuro para hover */
 }
 
-/* reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* comentario: helper para separar contenido de la nav fija */
+.mt-nav{ margin-top: 120px; }
 
-body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--texto);
-  background: white;
-  scroll-behavior: smooth;
+/* comentario: tipografia y colores basicos */
+body{ color:var(--texto); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#fff; }
+h1,h2,h3,h4{ color:var(--inet-azul); }
+a{ color:var(--inet-azul); }
+
+/* comentario: boton primario con el color solicitado */
+.btn-primary{
+  --bs-btn-bg: var(--btn);
+  --bs-btn-border-color: var(--btn);
+  --bs-btn-hover-bg: var(--btn-hover);
+  --bs-btn-hover-border-color: var(--btn-hover);
+  --bs-btn-active-bg: var(--btn-hover);
+  --bs-btn-active-border-color: var(--btn-hover);
 }
 
-/* header */
-.brand img {
-  object-fit: contain;
+/* comentario: bloque destacado suave */
+.destacado{
+  background:#eef8ff;
+  border:1px solid #e8ecf4;
+  border-left:6px solid var(--inet-celeste);
+  border-radius:.75rem;
+  padding:1rem;
 }
 
-/* titulos */
-h1, h2, h3, h4 { color: var(--color-primario); }
-
-/* destacados */
-.destacado {
-  background: #eef8ff;
-  border-left: 6px solid var(--color-secundario);
-  border-radius: .5rem;
+/* comentario: grid propio para article + aside como te gusta */
+.grid-dos{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:1.25rem;
+}
+@media (max-width: 900px){
+  .grid-dos{ grid-template-columns: 1fr; }
 }
 
-/* tabla */
-table a { color: var(--color-primario); text-decoration: none; }
-table a:hover { text-decoration: underline; }
+/* comentario: imagenes fluidas por si faltara la clase */
+img{ max-width:100%; height:auto; }
 
-/* footer */
-footer a { color: var(--color-primario); }
+/* comentario: tablas enlaces */
+table a{ text-decoration:none; }
+table a:hover{ text-decoration:underline; }
 
-/* espacio entre secciones */
-section { margin-bottom: 2rem; }
+/* comentario: tarjetas y sombras sutiles */
+.card{ border-radius:.75rem; }
+
+/* comentario: footer */
+footer a{ color:var(--inet-azul); }
