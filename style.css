@@ -1,58 +1,49 @@
-/* comentario: colores base inet y boton solicitado */
-:root{
-  --inet-azul:#004aad;
-  --inet-celeste:#0aa3e0;
-  --texto:#222;
-  --btn:#25558d;       /* color pedido para botones */
-  --btn-hover:#1e4876; /* un poco mas oscuro para hover */
+:root {
+  --color-primario: #25558d;
+  --gris-suave: #f5f7fb;
+  --texto: #222;
 }
 
-/* comentario: helper para separar contenido de la nav fija */
-.mt-nav{ margin-top: 120px; }
-
-/* comentario: tipografia y colores basicos */
-body{ color:var(--texto); font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:#fff; }
-h1,h2,h3,h4{ color:var(--inet-azul); }
-a{ color:var(--inet-azul); }
-
-/* comentario: boton primario con el color solicitado */
-.btn-primary{
-  --bs-btn-bg: var(--btn);
-  --bs-btn-border-color: var(--btn);
-  --bs-btn-hover-bg: var(--btn-hover);
-  --bs-btn-hover-border-color: var(--btn-hover);
-  --bs-btn-active-bg: var(--btn-hover);
-  --bs-btn-active-border-color: var(--btn-hover);
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif;
+  color: var(--texto);
+  margin: 0;
+  background: white;
 }
 
-/* comentario: bloque destacado suave */
-.destacado{
-  background:#eef8ff;
-  border:1px solid #e8ecf4;
-  border-left:6px solid var(--inet-celeste);
-  border-radius:.75rem;
-  padding:1rem;
+/* comentario: separador visual */
+.destacado {
+  padding: 1rem;
+  border-left: 5px solid var(--color-primario);
+  background: #eef4ff;
+  border-radius: .5rem;
 }
 
-/* comentario: grid propio para article + aside como te gusta */
-.grid-dos{
-  display:grid;
+/* comentario: estructura de columnas en index */
+.grid-dos {
+  display: grid;
   grid-template-columns: 2fr 1fr;
-  gap:1.25rem;
+  gap: 1.25rem;
 }
-@media (max-width: 900px){
-  .grid-dos{ grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .grid-dos { grid-template-columns: 1fr; }
 }
 
-/* comentario: imagenes fluidas por si faltara la clase */
-img{ max-width:100%; height:auto; }
+/* comentario: color de botones */
+.btn-primary {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+.btn-primary:hover {
+  background-color: #1d4773;
+  border-color: #1d4773;
+}
 
-/* comentario: tablas enlaces */
-table a{ text-decoration:none; }
-table a:hover{ text-decoration:underline; }
-
-/* comentario: tarjetas y sombras sutiles */
-.card{ border-radius:.75rem; }
-
-/* comentario: footer */
-footer a{ color:var(--inet-azul); }
+/* comentario: pies y enlaces */
+footer a {
+  text-decoration: none;
+  color: var(--color-primario);
+}
+footer a:hover {
+  text-decoration: underline;
+}
